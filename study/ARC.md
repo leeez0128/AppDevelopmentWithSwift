@@ -1,4 +1,21 @@
+> ## RC(Reference Counting)
+```
+- 애플에서 메모리를 관리 하는 방법
+- 참조해서 사용할 때 카운트를 해서 메모리를 관리 하겠다.
+- 메모리를 할당하거나, 메모리 포인터를 참조 할 때 레퍼런스 카운트를 증가 시키고, 사용을 완료하면 레퍼런스 카운트를 감소시킨다.
+```
+<br><br>
+** Compile, Linking, Runtime (linking) 3단계를 거쳐 Application 이 빌드되고 만들어져서 실행된다.
+
 > ## ARC(Automatic Reference Counting)
+```
+ARC(Automatic Reference Counting)는 컴파일 타임(compile time)에 기존 MRC때 개발자가 직접 코드를 작성해야 되던 부분을 
+자동으로 구문을 분석해서 적절하게 레퍼런스 감소 코드삽입해 주어, 실행 중에 별도의 메모리 관리가 이루어지지 않는다.
+
+* ARC vs GC
+- GC(Garbage Collection)은 프로그램 실행 중(Runtime)에 동적으로 감시하고 있다가, 더 이상 사용할 필요가 없다고 여겨지는 것을 소멸(해제) 시켜버린다.
+```
+
 
 ###  Strong  <br>
 ```
@@ -26,12 +43,7 @@
 ```
 
 <br><br>
-> ## ARC vs GC
+> ## MRC(Manual Reference Counting)
 ```
-Compile, Linking, Runtime (linking) 3단계를 거쳐 Application 이 빌드되고 만들어져서 실행된다.
-
-ARC(Automatic Reference Counting)는 컴파일 타임(compile time)에 기존 MRC때 개발자가 직접 코드를 작성해야 되던 부분을 
-자동으로 구문을 분석해서 적절하게 레퍼런스 감소 코드삽입해 주어, 실행 중에 별도의 메모리 관리가 이루어지지 않는다.
-
-GC(Garbage Collection)은 프로그램 실행 중(Runtime)에 동적으로 감시하고 있다가, 더 이상 사용할 필요가 없다고 여겨지는 것을 소멸(해제) 시켜버린다.
+- Objective-C 로 개발하던 시기에는 개발자가 직접 참조 관리
 ```
